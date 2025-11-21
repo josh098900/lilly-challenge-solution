@@ -17,6 +17,8 @@ objective 3, added event listener to the "add medicine form, implemented a creat
 
 objective 4, i improved ux by centering the content on the screen and styling the list items as cards. makes individual items clearer than plain text list
 
+objective 5,implemented get/average endpoint in main.py, function iterates through json data, filters out null values to prevent any type errors, calculates mean price and returns it, rounded to 2 decimal places
+
 ## Problems Faced
 
 initially my fetch function returned undefined when trying to map over the data, my solution was logging the response to the console, i realised the backend returns an object rather than a direct array, i then adjusted my code to access data.medicines before looping
