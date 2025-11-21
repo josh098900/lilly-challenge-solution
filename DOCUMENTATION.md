@@ -1,17 +1,28 @@
 # Lilly Technical Challenge Documentation Template
 
-*This documentation template serves as a place for you to discuss how you approached this challenge, any issues you faced & how you overcame them, or any other points that you feel would be relevant for the interviewers to know. The text in italics is here to guide you - feel free to remove it once you fill out each section!*
-
-***Not every section in this document is required. This is just a template to help get you started. Feel free to add or remove sections as you feel necessary.***
-
 ## Approach
-*How did you approach this challenge? Did you work through the objectives in any particular order? If so, why? Did you utilize any external resources, such as tutorials, guides, or other materials?*
+
+i approached this challenge by breaking it down into logical steps,
+
+1.  enviroment setup, 2. read operations (get): my priority was to establish a connection between frontend and backend, i implemented the fetch logic first to ensure i could see the data, 3. once data was visible i dealt with what i would call dirty data where some parts are missing. 4. write operations (post) i built the input form and createmedicine logic, verified api endpoints by analysing main.py
+    ui/ux improvement, used css to improve usability.
 
 ## Objectives - Innovative Solutions
-*For the challenge objectives, did you do anything in a particular way that you want to discuss? Is there anything you're particularly proud of that you want to highlight? Did you attempt some objectives multiple times, or go back and re-write particular sections of code? If so, why? Use this space to document any key points you'd like to tell us about.*
+
+Objective 1, starting now i plan to use the js fetch api to retrieve data from http://localhost:8000/medicines and render it into the dom, in index.html
+
+objective 2, api returns some medicines with empty names or null prices, ill add conditional logic to check for the values, if a name is missing ill display unknown medicine, if price missing i will display price tbc
+
+objective 3, added event listener to the "add medicine form, implemented a createMedicine function that intercepts the submit event, reads input values and sends post request to backend. after successful add it refreshes list
+
+objective 4, i improved ux by centering the content on the screen and styling the list items as cards. makes individual items clearer than plain text list
 
 ## Problems Faced
-*Use this space to document and discuss any issues you faced while undertaking this challenge and how you solved them. We recommend doing this proactively as you experience and resolve the issues - make sure you don't forget! (Screenshots are helpful, though not required)*.
+
+initially my fetch function returned undefined when trying to map over the data, my solution was logging the response to the console, i realised the backend returns an object rather than a direct array, i then adjusted my code to access data.medicines before looping
+
+i encountered a TypeError: Cannot read properties of null, when adding the event listener, my solution was i realised i had not added the id="add-medicine-form" to the html form element, adding the id allowed js to locate the element and attach the listener
 
 ## Evaluation
-*How did you feel about the challenge overall? Did some parts go better than others? Did you run out of time? If you were to do this again, and were given more time, what would you do differently?*
+
+overall i felt the challenge went well, successuflly meeting all core functional requirements
